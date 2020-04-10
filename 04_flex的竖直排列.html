@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .row1{
+            height: 300px;
+            /* 弹性盒容器 */
+            display: flex;
+            /* 竖直排列 */
+            flex-direction: column;
+            /* 居中 */
+            align-items: center;
+        }
+        .row1 .box1{
+            flex: 1;
+            width: 80px;
+            background-color: rgb(26, 230, 202);
+        }
+        .row1 .box2{
+            flex: 2;
+            width: 180px;
+            background-color: rgb(193, 230, 26);
+        }
+        .row1 .box3{
+            flex: 3;
+            width: 280px;
+            background-color: rgb(230, 182, 26);
+        }
+    </style>
+</head>
+<body>
+    <!-- 竖直排列,高度的份数可以不同，以父盒子高度为基准 -->
+    <div class="row1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

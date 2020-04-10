@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口标签。手机端必须要写 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2></h2>
+    <script>
+        // 在h2标签中输出屏幕的宽度
+        var h2 = document.querySelector('h2');
+
+        // document是文档的意思，documentElement表示文档根元素，就是屏幕
+        // clientWidth表示宽度
+        var width = document.documentElement.clientWidth;
+        h2.innerHTML = `你的屏幕宽度是${width}`
+    </script>
+</body>
+
+</html>

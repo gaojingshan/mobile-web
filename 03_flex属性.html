@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .row1{
+            width: 95%;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .row1 .box1{
+            flex: 1;
+            background: -webkit-linear-gradient(left,rgb(230, 9, 238),rgb(245, 98, 189));
+        }
+        .row1 .box2{
+            flex: 1;
+            background-color: rgb(180, 228, 7);
+        }
+        .row1 .box3{
+            flex: 1;
+            background-color: rgb(73, 207, 11);
+        }
+        .row1 .box4{
+            flex: 1;
+            background-color: rgb(16, 240, 221);
+        }
+        .row2{
+            width: 95%;
+            height: 100px;
+            margin: 10px auto;
+            display: flex;
+        }
+        .row2 .box1{
+            flex: 2;
+            background: -webkit-linear-gradient(left,rgb(230, 9, 238),rgb(245, 98, 189));
+        }
+        .row2 .box2{
+            flex: 2;
+            background-color: rgb(180, 228, 7);
+        }
+        .row2 .box3{
+            flex: 4;
+            background-color: rgb(73, 207, 11);
+        }
+        .row2 .box4{
+            flex: 1;
+            background-color: rgb(16, 240, 221);
+        }
+
+        .row3{
+            width: 95%;
+            height: 100px;
+            margin: 10px auto;
+            display: flex;
+        }
+        .row3 .box1{
+            flex: 1;
+            margin-right: 10px;
+            background: -webkit-linear-gradient(left,rgb(230, 9, 238),rgb(245, 98, 189));
+        }
+        .row3 .box2{
+            flex: 1;
+            margin-right: 10px;
+            background-color: rgb(180, 228, 7);
+        }
+        .row3 .box3{
+            flex: 1;
+            margin-right: 10px;
+            background-color: rgb(73, 207, 11);
+        }
+        .row3 .box4{
+            flex: 1;
+            background-color: rgb(16, 240, 221);
+        }
+
+        .row4{
+            width: 95%;
+            height: 60px;
+            margin: 10px auto;
+            display: flex;
+        }
+        .row4 .box1{
+            width: 60px;
+            margin-right: 10px;
+            background: -webkit-linear-gradient(left,rgb(230, 9, 238),rgb(245, 98, 189));
+        }
+        .row4 .box2{
+            flex: 1;
+            background-color: rgb(180, 228, 7);
+        }
+        .row4 .box3{
+            width: 60px;
+            margin-left: 10px;
+            background-color: rgb(73, 207, 11);
+        }
+    </style>
+</head>
+<body>
+    <!-- display: flex 弹性盒容器。内部的子盒子自动都是弹性盒了。内部的子盒子可以用flex来设置份数。 -->
+    <!-- 均分 -->
+    <div class="row1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+    <!-- 可以自由设置份数 -->
+    <div class="row2">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+
+    <!-- 不用用border来模拟间距了。flex的份数中，含有了margin -->
+    <div class="row3">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+
+    <!-- flex 的固比固 -->
+    <!-- 固比固非常简单了,固比固不用绝对定位了。 -->
+    <div class="row4">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+</body>
+</html>

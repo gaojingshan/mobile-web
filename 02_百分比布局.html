@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .row1 {
+            width: 95%;
+            height: 100px;
+            margin: 0 auto;
+            /* 渐变色 */
+            background: -webkit-linear-gradient(left, rgb(63, 3, 98), rgb(178, 116, 236));
+        }
+
+        .row2 {
+            width: 95%;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+
+        .row2 .box1 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(71, 255, 224);
+        }
+
+        .row2 .box2 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(214, 233, 41);
+        }
+
+        .row2 .box3 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(108, 255, 71);
+        }
+
+        .row2 .box4 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(71, 255, 141);
+        }
+
+        .row3 {
+            width: 95%;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+
+        .row3 .box1 {
+            width: 50%;
+            float: left;
+            height: 100px;
+            background-color: rgb(71, 255, 224);
+        }
+
+        .row3 .box2 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(214, 233, 41);
+        }
+
+        .row3 .box3 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(108, 255, 71);
+        }
+
+        .row4 {
+            width: 95%;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+
+        .row4 .box1 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(71, 255, 224);
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        .row4 .box2 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(214, 233, 41);
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        .row4 .box3 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(108, 255, 71);
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        .row4 .box4 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(71, 255, 141);
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        .row5 {
+            width: 95%;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+
+        .row5 .box1 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(71, 255, 224);
+            /* 间隙用border来模拟 */
+            border-right: 5px solid white;
+            box-sizing: border-box;
+        }
+
+        .row5 .box2 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(214, 233, 41);
+            /* 间隙用border来模拟 */
+            border-left: 5px solid white;
+            border-right: 5px solid white;
+            box-sizing: border-box;
+        }
+
+        .row5 .box3 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(108, 255, 71);
+            /* 间隙用border来模拟 */
+            border-left: 5px solid white;
+            border-right: 5px solid white;
+            box-sizing: border-box;
+        }
+
+        .row5 .box4 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            background-color: rgb(71, 255, 141);
+            /* 间隙用border来模拟 */
+            border-left: 5px solid white;
+            box-sizing: border-box;
+        }
+
+        .row6 {
+            width: 95%;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+
+        .row6 .box1 {
+            float: left;
+            width: 25%;
+            height: 100px;
+            /* 间隙用border来模拟 */
+            border-right: 5px solid white;
+            box-sizing: border-box;
+        }
+
+        .row6 .box1 .inn {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(71, 255, 224);
+            border-radius: 10px;
+        }
+
+        .row6 .box2 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            /* 间隙用border来模拟 */
+            border-left: 5px solid white;
+            border-right: 5px solid white;
+            box-sizing: border-box;
+        }
+
+        .row6 .box2 .inn {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(214, 233, 41);
+            border-radius: 10px;
+        }
+
+        .row6 .box3 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            /* 间隙用border来模拟 */
+            border-left: 5px solid white;
+            border-right: 5px solid white;
+            box-sizing: border-box;
+        }
+
+        .row6 .box3 .inn {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(108, 255, 71);
+            border-radius: 10px;
+        }
+
+        .row6 .box4 {
+            width: 25%;
+            float: left;
+            height: 100px;
+            /* 间隙用border来模拟 */
+            border-left: 5px solid white;
+            box-sizing: border-box;
+        }
+        .row6 .box4 .inn{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(71, 255, 141);
+            border-radius: 10px;
+        }
+
+        .row7 {
+            width: 95%;
+            margin: 10px auto;
+            overflow: hidden;
+            position: relative;
+            padding: 0 70px;
+            box-sizing: border-box;
+        }
+
+        .row7 .box1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            background-color: rgb(71, 255, 224);
+        }
+
+        .row7 .box2 {
+            width: 100%;
+            height: 60px;
+            background-color: rgb(214, 233, 41);
+        }
+
+        .row7 .box3 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background-color: rgb(108, 255, 71);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 百分比布局的盒子 -->
+    <div class="row1"></div>
+    <!-- 百分比等分，每份25% -->
+    <div class="row2">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+    <!-- 百分比布局，分别50% 25% 25% -->
+    <div class="row3">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+    <!-- 加边框等分的盒子，每份25% box-sizing: border-box -->
+    <div class="row4">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+
+    <!-- 做缝隙一定要用边框模拟 -->
+    <div class="row5">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+
+    <!-- 做缝隙一定要用边框模拟,并且本身元素就有边框或者圆角 -->
+    <div class="row6">
+        <div class="box1">
+            <div class="inn"></div>
+        </div>
+        <div class="box2">
+            <div class="inn"></div>
+        </div>
+        <div class="box3">
+            <div class="inn"></div>
+        </div>
+        <div class="box4">
+            <div class="inn"></div>
+        </div>
+    </div>
+
+    <!-- 固比固模型 -->
+    <div class="row7">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>

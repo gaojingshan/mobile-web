@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 40px;
+        }
+
+        .box {
+            width: 3rem;
+            height: 3rem;
+            background-color: rgb(40, 212, 224);
+        }
+
+        .row1{
+            margin: 10px auto;
+            width: 8rem;
+            height: 2rem;
+        }
+        .row1 .box1{
+            float: left;
+            width: 2rem;
+            height: 2rem;
+            background-color: rgb(103, 221, 35);
+        }
+        .row1 .box2{
+            float: left;
+            width: 2rem;
+            height: 2rem;
+            background-color: rgb(35, 184, 221);
+        }
+        .row1 .box3{
+            float: left;
+            width: 2rem;
+            height: 2rem;
+            background-color: rgb(221, 35, 196);
+        }
+        .row1 .box4{
+            float: left;
+            width: 2rem;
+            height: 2rem;
+            padding-left: 10px;
+            box-sizing: border-box;
+            background-color: rgb(202, 221, 35);
+            font-size: .35rem;
+        }
+
+        .row2{
+            margin: 10px auto;
+            width: 7.6rem;
+            height: 1.9rem;
+        }
+        .row2 .box1{
+            float: left;
+            width: 1.9rem;
+            height: 1.9rem;
+            background-color: rgb(103, 221, 35);
+        }
+        .row2 .box2{
+            float: left;
+            width: 1.9rem;
+            height: 1.9rem;
+            background-color: rgb(35, 184, 221);
+        }
+        .row2 .box3{
+            float: left;
+            width: 1.9rem;
+            height: 1.9rem;
+            background-color: rgb(221, 35, 196);
+        }
+        .row2 .box4{
+            float: left;
+            width: 1.9rem;
+            height: 1.9rem;
+            background-color: rgb(202, 221, 35);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- rem 做什么用的：做高度也等比变化的时候。 -->
+    <!-- rem属性就是html标签字号的倍数。 -->
+    <!-- rem属性天生不是用于设置宽度、高度的。一开始用于设置给视力欠佳的用户使用的。程序员通过设置html标签的字号，可以设置所有元素的字号了。比如1rem，2rem。 -->
+    <div class="box"></div>
+
+    <div class="row1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4">11</div>
+    </div>
+
+    <div class="row2">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+    <script>
+        // 当窗口改变尺寸时
+        window.onresize = function () {
+            setFontSize();
+        }
+        // 一上来也调用一下
+        setFontSize();
+
+        // 改变字号的函数
+        function setFontSize() {
+            // ① 算出当前的浏览器屏幕宽度，和320的倍数
+            var rate = document.documentElement.clientWidth / 320;
+            // ② 让倍数乘以40设置给html当字号
+            document.documentElement.style.fontSize = rate * 40 + 'px'
+        }
+
+    </script>
+</body>
+
+</html>
