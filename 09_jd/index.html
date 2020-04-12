@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="cat_btn">
+            <i></i>
+        </div>
+        <div class="form">
+            <div class="srk">
+                <i class="jd"></i>
+                <i class="line"></i>
+                <i class="fdj"></i>
+                <span class="text">联想一体机</span>
+            </div>
+        </div>
+        <div class="login">登录</div>
+    </header>
+    <section class="carousel">
+        <section class="inn"></section>
+        <div class="swiper-container" id="container1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#"><img src="images/b1.jpg" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="images/b2.jpg" alt=""></a></div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="images/b3.jpg" alt=""></a></div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="images/b4.jpg" alt=""></a></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+    <script>
+        var mySwiper = new Swiper('#container1', {
+            loop: true, // 循环模式选项
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination'
+            },
+            // 自动轮播
+            autoplay: {
+                // 自动间隔
+                delay: 1000,
+                // 最后一张不停
+                stopOnLastSlide: false,
+                // 当用户拨弄了一下，就停
+                disableOnInteraction: true,
+            }
+        })        
+    </script>
+
+    <nav>
+        <div class="swiper-container" id="container2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="box">
+                            <img src="images/i1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        
+    </nav>
+
+    <script>
+        var mySwiper = new Swiper('#container2', {
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination'
+            }
+        })        
+    </script>
+
+</body>
+
+</html>

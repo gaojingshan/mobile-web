@@ -1,0 +1,340 @@
+header {
+    height: 3.6rem;
+    background: rgb(255, 0, 54);
+}
+
+header .top {
+    height: 1.8rem;
+    line-height: 1.8rem;
+    padding: 0 .4rem;
+    position: relative;
+    transition: all .3s ease 0s;
+}
+
+header .top .nav {
+    display: block;
+    background: url(../images/top.png) no-repeat;
+    background-size: 12rem auto;
+    width: 0.86rem;
+    height: 1.2rem;
+    float: left;
+    position: relative;
+    top: 50%;
+    margin-top: -.6rem;
+}
+
+header .top .tmall {
+    width: 12rem;
+    height: .82rem;
+    text-align: center;
+    float: left;
+    /* transform: translateY(0px); */
+    transform: scale(1);
+    transition: all .3s ease 0s;
+}
+
+header .top .tmall i {
+    display: block;
+    background: url(../images/tmall.png) no-repeat;
+    background-size: cover;
+    width: 4.76rem;
+    height: 0.82rem;
+    position: relative;
+    left: 50%;
+    margin-left: -2.38rem;
+    top: 50%;
+}
+
+header .top .text {
+    font-size: 0.56rem;
+    color: #fff;
+    float: right;
+}
+
+header .kuang {
+    background: #fff;
+    width: 94.7%;
+    height: 1.44rem;
+    border-radius: .2rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 1.8rem;
+    left: 2.67%;
+    transition: all .3s ease 0s;
+}
+
+header .kuang i {
+    display: block;
+    background: url(../images/fdj.png) no-repeat;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-size: cover;
+    margin: 0 .4rem;
+}
+
+header .kuang span {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 0.56rem;
+}
+
+/* 顶部变形固定样式 */
+
+.padding {
+    display: none;
+    padding-top: 4.3rem;
+}
+
+header.active {
+    height: 2.32rem;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+header.active .top {
+    height: 2.32rem;
+    line-height: 2.32rem;
+    padding: 0 .4rem;
+    position: relative;
+}
+
+header.active .top .nav {
+    display: block;
+    background: url(../images/top.png) no-repeat;
+    background-size: 12rem auto;
+    width: 0.86rem;
+    height: 1.2rem;
+    float: left;
+    position: relative;
+    top: 50%;
+    margin-top: -.6rem;
+}
+
+header.active .top .tmall {
+    width: 12rem;
+    height: .82rem;
+    text-align: center;
+    float: left;
+    opacity: 0;
+    /* transform: translateY(-50px); */
+    transform: scale(0);
+}
+
+header.active .top .tmall i {
+    display: block;
+    background: url(../images/tmall.png) no-repeat;
+    background-size: cover;
+    width: 4.76rem;
+    height: 0.82rem;
+    position: relative;
+    left: 50%;
+    margin-left: -2.38rem;
+    top: 50%;
+}
+
+header.active .top .text {
+    font-size: 0.56rem;
+    color: #fff;
+    float: right;
+}
+
+header.active .kuang {
+    background: #fff;
+    width: 11.36rem;
+    height: 1.44rem;
+    border-radius: .2rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    /* top: .22rem; */
+    top: 50%;
+    margin-top: -0.77rem;
+    left: 50%;
+    margin-left: -5.68rem;
+}
+
+header.active .kuang i {
+    display: block;
+    background: url(../images/fdj.png) no-repeat;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-size: cover;
+    margin: 0 .4rem;
+}
+
+header.active .kuang span {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 0.56rem;
+}
+
+/* nav */
+
+nav .row {
+    display: flex;
+}
+
+nav .ico {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: .26rem;
+}
+
+nav .ico i {
+    display: block;
+    width: 1.9rem;
+    height: 1.9rem;
+}
+
+nav .ico1 i {
+    background: url(../images/n1.png) no-repeat;
+    background-size: cover;
+}
+
+nav .ico2 i {
+    background: url(../images/n2.png) no-repeat;
+    background-size: cover;
+}
+
+nav .ico3 i {
+    background: url(../images/n3.png) no-repeat;
+    background-size: cover;
+}
+
+nav .ico4 i {
+    background: url(../images/n4.png) no-repeat;
+    background-size: cover;
+}
+
+nav .ico5 i {
+    background: url(../images/n5.png) no-repeat;
+    background-size: cover;
+}
+
+nav .ico span {
+    font-size: 0.52rem;
+    line-height: 1.04rem;
+}
+
+/* banner */
+
+.banner {
+    margin: 0 .4rem;
+}
+
+.banner img {
+    width: 100%;
+    height: 5.36rem;
+}
+
+.banner .swiper-pagination-bullet {
+    width: .64rem;
+    height: .08rem;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+/* 限时抢购 */
+
+.gouwu {
+    padding: .4rem .48rem;
+}
+.gouwu .row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+.gouwu .row.row1{
+    margin-bottom: .26rem;
+}
+
+.gouwu .box {
+    flex: 1;
+    /* width: 6.88rem; */
+    height: 5.06rem;
+    background-color: rgb(247, 247, 247);
+    padding: .52rem .36rem .42rem;
+    box-sizing: border-box;
+}
+
+.gouwu .box:nth-child(1) {
+    margin-right: 0.24rem;
+}
+
+.gouwu .box .box_top {
+    display: flex;
+}
+
+.gouwu .box .box_top span {
+    flex: 1;
+}
+
+.gouwu .box .box_top span.text {
+    font-weight: bold;
+    font-size: .64rem;
+    color: rgb(32, 32, 32);
+}
+
+.gouwu .box .box_top span.time {
+    position: relative;
+    top: .1rem;
+}
+
+.gouwu .box .box_top span i {
+    display: inline-block;
+    font-style: normal;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: black;
+    border-radius: .1rem;
+    color: #fff;
+    text-align: center;
+    line-height: .8rem;
+}
+
+.gouwu .box .box_top span b {
+    font-style: normal;
+    font-size: .64rem;
+    line-height: 0.64rem;
+    position: relative;
+    /* top: .1rem; */
+    left: .06rem;
+}
+
+.gouwu .box .box_bot {
+    display: flex;
+    margin-top: 0.3rem;
+}
+
+.gouwu .box .box_bot .box_l {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gouwu .box .box_bot .box_r {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gouwu .box .box_bot img {
+    width: 2.94rem;
+    height: auto;
+}
+
+.gouwu .box .box_bot span {
+    font-size: .4rem;
+    line-height: .5rem;
+    border: .01rem solid rgb(255, 0, 54);
+    color: rgb(255, 0, 54);
+    background-color: rgb(255, 237, 241);
+    padding: 0 .08rem;
+    position: relative;
+    bottom: 0.4rem;
+}
