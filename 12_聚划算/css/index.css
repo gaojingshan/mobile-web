@@ -1,0 +1,103 @@
+html{
+    background-color: #f5f5f5;
+}
+header {
+    background-color: #E61414;
+    height: 1.6rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+header .logo {
+    position: relative;
+    width: 4rem;
+    height: 1.6rem;
+}
+
+header .logo svg {
+    width: 4rem;
+    height: 1.6rem;
+}
+header .logo i{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0.33rem;
+    width: 0.22rem;
+    height: 1rem;
+    box-shadow: 3px 0px 11px -4px #000
+}
+
+header .nav {
+    flex: 1;
+    width: 9.4rem;
+    white-space: nowrap;
+}
+header .nav span{
+    display: inline-block;
+    font-size: .56rem;
+    color: #fff;
+    line-height: 1.52rem;
+    margin: 0 .2rem;
+}
+header .nav span.active{
+    border-bottom: .08rem solid #fff;
+    box-shadow:0px 3px 4px -4px #000
+}
+
+header .jiao {
+    position: relative;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+header .jiao i{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0.33rem;
+    width: 0.22rem;
+    height: 1rem;
+    box-shadow: -3px 0px 11px -4px #000;
+}
+header .jiao svg{
+    transform: rotate(180deg);
+    transition: all .4s ease 0s;
+}
+
+/* 弹出的导航 */
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.85);
+    opacity: 0;
+    transform: translateY(-2.5rem);
+    margin-top: 1.6rem;
+    height: 100%;
+    transition: all .4s ease 0s;
+}
+.modal p{
+    color: #fff;
+}
+
+.ul.row{
+    margin-top: 2.4rem;
+    padding: .2rem 0;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+}
+
+.ul.row .tu{
+    flex: 1;
+    width: 3.6rem;
+    height: 4rem;
+}
+.ul.row .tu img{
+    width: 3.6rem;
+    height: 4rem;
+}
