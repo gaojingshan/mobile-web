@@ -242,12 +242,14 @@ nav .ico span {
 .gouwu {
     padding: .4rem .48rem;
 }
-.gouwu .row{
+
+.gouwu .row {
     display: flex;
     width: 100%;
     box-sizing: border-box;
 }
-.gouwu .row.row1{
+
+.gouwu .row.row1 {
     margin-bottom: .26rem;
 }
 
@@ -297,7 +299,7 @@ nav .ico span {
 
 .gouwu .box .box_top span b {
     font-style: normal;
-    font-size: .64rem;
+    font-size: .5rem;
     line-height: 0.64rem;
     position: relative;
     /* top: .1rem; */
@@ -330,11 +332,25 @@ nav .ico span {
 
 .gouwu .box .box_bot span {
     font-size: .4rem;
-    line-height: .5rem;
     border: .01rem solid rgb(255, 0, 54);
     color: rgb(255, 0, 54);
     background-color: rgb(255, 237, 241);
     padding: 0 .08rem;
     position: relative;
     bottom: 0.4rem;
+}
+
+/* 返回顶部按钮 */
+
+.top_return {
+    position: fixed;
+    bottom: 1.8rem;
+    right: 0.2rem;
+    z-index: 999;
+    opacity: 0;
+}
+
+.top_return img {
+    width: 1.76rem;
+    height: 1.76rem;
 }

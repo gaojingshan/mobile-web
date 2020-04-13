@@ -74,3 +74,36 @@ time();
 setInterval(function () {
   time();
 }, 1000);
+
+// 返回顶部按钮
+// 获取header的净位置
+var offset_top = $('#header').offset().top;
+var shang_scroll_top = 0;
+var scroll_top = 0;
+$(window).scroll(function () {
+  shang_scroll_top = scroll_top;
+  scroll_top = $(window).scrollTop();
+  // console.log(scroll_top, shang_scroll_top);
+  // 如果后一个卷动值比前一个大就显示返回顶部
+  if (shang_scroll_top > scroll_top) {
+    $('#top_return').css('opacity', 1);
+  }
+  if (scroll_top == 0) {
+    $('#top_return').css('opacity', 0);
+  }
+
+  // console.log(scroll_top);
+});
+$('#top_return').click(function () {
+  $('html, body').animate(
+    {
+      scrollTop: offset_top,
+    },
+    800
+  );
+});
+
+// 页面一加载就返回顶部
+window.onload = function () {
+  $('#top_return').trigger('click');
+};
