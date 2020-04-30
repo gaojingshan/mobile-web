@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 7.5rem;
+            height: 7.5rem;
+            background-color: orange;
+        }
+
+        header {
+            width: 100%;
+            height: 3.6rem;
+            background-color: rgb(255, 0, 54);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        header .box1 {
+            display: flex;
+            height: 1.76rem;
+        }
+
+        header .box1 .catbtn {
+            width: 1.76rem;
+            height: 1.76rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header .box1 .catbtn::before {
+            content: '';
+            /* 天生是行内元素，要转块 */
+            display: block;
+            width: 0.95rem;
+            height: 0.95rem;
+            background: url(images/top.png) no-repeat;
+            /* 下面这两个数值不好算 */
+            /* 宽度计算方法：0.95 / (42 / 564) */
+            /* 高度计算方法：12.76 / (564 / 62) */
+            background-size: 12.76rem 1.403rem;
+            /* Y的偏移量的计算方法是，设计图上偏移了8px，是精灵高度的8分之1 */
+            /* 0.95 / 8 */
+            background-position: 0 -0.118rem;
+        }
+
+        header .box1 .login {
+            width: 1.76rem;
+            height: 1.76rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header .box1 .logo {
+            flex: 1;
+            height: 1.76rem;
+            background: url(images/tmall.png) no-repeat;
+            background-size: 4.74rem auto;
+            background-position: center center;
+            transition: all .5s ease 0s;
+        }
+
+        header .box1 .login a {
+            display: block;
+            font-size: 0.6rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        header .box2 {
+            height: 1.84rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s ease 0s;
+        }
+
+        header .box2 .kuang {
+            border-radius: 10px;
+            width: 14rem;
+            height: 1.6rem;
+            background-color: white;
+            transition: all .5s ease 0s;
+        }
+
+        header.narrow {
+            height: 1.76rem;
+        }
+
+        header.narrow .box2 {
+            height: 0;
+        }
+
+        header.narrow .logo {
+            transform: translateY(-200px) scale(0);
+        }
+
+        header.narrow .kuang {
+            transform: translateY(-0.8rem) scale(0.8);
+        }
+
+        p {
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: #aaa;
+            background-color: #eee;
+        }
+
+        body {
+            padding-top: 3.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="box1">
+            <div class="catbtn"></div>
+            <div class="logo" id="logo"></div>
+            <div class="login">
+                <a href="">登录</a>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="kuang"></div>
+        </div>
+    </header>
+    <p>内容</p>
+    <p>内容</p>
+    <p>内容</p>
+    <p>内容</p>
+    <p>内容</p>
+    <p>内容</p>
+    <p>内容</p>
+    <p>内容</p>
+    <p>内容</p>
+
+    <script>
+        // 驱动rem
+        function setHTMLFontSize() {
+            // 设置字号为屏幕视口宽度除以15，一行就是15rem
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 15 + 'px';
+        }
+
+        window.onresize = setHTMLFontSize;
+        setHTMLFontSize();
+
+        var header = document.getElementById('header');
+        var logo = document.getElementById('logo');
+
+        // 监听浏览器窗口的卷动值改变
+        window.onscroll = function () {
+            // 阈值是1.76rem，就是box1这个盒子的height
+            // 要算清楚1.76是多少px？？
+            var a = document.documentElement.clientWidth / 15 * 1.76;
+            var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+            logo.innerHTML = scroll;
+
+            if (scroll > a) {
+                header.className = 'narrow';
+            } else {
+                header.className = '';
+            }
+        };
+    </script>
+</body>
+
+</html>
